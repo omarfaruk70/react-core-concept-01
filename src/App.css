@@ -17,6 +17,11 @@
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
+.NationAnthem{
+  border: 2px solid tomato;
+  padding: 50px;
+  border-radius: 10px;
+}
 
 @keyframes logo-spin {
   from {
