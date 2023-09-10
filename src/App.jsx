@@ -30,7 +30,7 @@ function App() {
       {/* another component function called */}
       <FavouriteSub></FavouriteSub>
 
-      <Todo task='Learn React core concepts from Programming Hero' isDone={true} ></Todo>
+      <Todo task='Learn React core concepts from Programming Hero' isDone={false} ></Todo>
       {/* import actor component */}
       <Actors name={'Bappa Raj'}></Actors>
       {/* for dynamic actors shown */}
