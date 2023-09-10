@@ -1,8 +1,16 @@
 // import { useState } from 'react'
 import './App.css'
+import Actors from './Actors';
+import Singer from './Singer';
 
 function App() {
   // const [count, setCount] = useState(0)
+  const actors = ['Bappa Raj', 'Shariful Raj', 'Manna', 'King khan Shakib khan'];
+  const singers = [
+    {id: 1, name: 'Dr. Mahfuzur Rahman', age: 70},
+    {id: 2, name: 'Habib Wahid', age: 35},
+    {id: 3, name: 'Chancal Chowdhury', age: 32},
+  ];
 
   return (
     <>
@@ -16,6 +24,16 @@ function App() {
       <NationAnthem></NationAnthem>
       {/* another component function called */}
       <FavouriteSub></FavouriteSub>
+      {/* import actor component */}
+      <Actors name={'Bappa Raj'}></Actors>
+      {/* for dynamic actors shown */}
+      {
+        actors.map(eachActor=> <Actors name={eachActor}></Actors>)
+      }
+      {/* singers */}
+      {
+        singers.map(singer=> <Singer singer={singer}></Singer>)
+      }
 
     </>
   )
