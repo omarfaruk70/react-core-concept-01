@@ -3,6 +3,8 @@ import './App.css'
 import Actors from './Actors';
 import Singer from './Singer';
 
+
+// App component function is the main function of root elemeent .. all jsx will run through this main function
 function App() {
   // const [count, setCount] = useState(0)
   const actors = ['Bappa Raj', 'Shariful Raj', 'Manna', 'King khan Shakib khan'];
@@ -15,11 +17,13 @@ function App() {
   return (
     <>
      
-      <h1>Vite + React</h1>
+      <h1>React core concepts 1</h1>
+      <h4>(components,jsx rules, props, pass or read props, conditional rendering, ternary , if else condition, && operator  <br></br> ||(OR) operator, map method, All about export or import, css className,)</h4>
       {/* call the Showname component function */}
       <ShowName></ShowName>
       {/* reusable component function */}
       <ShowName></ShowName>
+      <Device name='Laptop' price='65000'></Device>
       {/* another component function */}
       <NationAnthem></NationAnthem>
       {/* another component function called */}
@@ -41,7 +45,18 @@ function App() {
 // create a component function and return it main component
 function ShowName(){
   const age = 22;
-  return <h2>I am Omar Faruk with age: {age}. Currently I am learning React js</h2>
+  const showNameCss = {
+    margin: '15px',
+    pading: '20px',
+    border: '5px solid purple',
+    borderRadius: '10px'
+
+  }
+  return (
+    <div style={showNameCss}>
+   <h2>I am Omar Faruk with age: {age}. Currently I am learning React js</h2>
+    </div>
+  )
 }
 // create another dynamic component function
 function NationAnthem(){
@@ -72,6 +87,19 @@ function FavouriteSub(){
       <p>
         But I love to learn Programming
       </p>
+    </div>
+  )
+}
+// component function Device . its accepting properties name(props from line no 26.)
+function Device(props){  //props return an objects
+  // console.log(props)
+  // console.log(props.price)
+  const {name, price} = props;
+  console.log(name);
+  console.log(price);
+  return(
+    <div>
+      <h3>MY favourite device is: </h3>
     </div>
   )
 }
