@@ -2,6 +2,7 @@
 import './App.css'
 import Actors from './Actors';
 import Singer from './Singer';
+import Todo from './Todo'
 
 
 // App component function is the main function of root elemeent .. all jsx will run through this main function
@@ -28,6 +29,8 @@ function App() {
       <NationAnthem></NationAnthem>
       {/* another component function called */}
       <FavouriteSub></FavouriteSub>
+
+      <Todo task='Learn React core concepts from Programming Hero' isDone={true} ></Todo>
       {/* import actor component */}
       <Actors name={'Bappa Raj'}></Actors>
       {/* for dynamic actors shown */}
@@ -95,11 +98,11 @@ function Device(props){  //props return an objects
   // console.log(props)
   // console.log(props.price)
   const {name, price} = props;
-  console.log(name);
-  console.log(price);
+  // console.log(name);
+  // console.log(price);
   return(
     <div>
-      <h3>MY favourite device is: </h3>
+      <h3>MY favourite device is: {name} and its price is : {price} thousand taka</h3>
     </div>
   )
 }
